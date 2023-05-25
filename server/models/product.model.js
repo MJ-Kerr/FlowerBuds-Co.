@@ -15,9 +15,21 @@ const ProductsSchema = new mongoose.Schema({
         type: String,
         required: [true, "Description is required"],
     },
-
+    Price: {
+        type: String,
+        required: [true, "Price is required"]
+    },
+    Quantity: {
+        type: String,
+        required: [true, "Starting quantity is required"]
+    },
     isCandle: {
-        type: Boolean
+        type: Boolean,
+        required: [true, "Please check if this is a candle"]
+    },
+    isApparel: {
+        type: Boolean,
+        required: [true, "Please check if this is a piece of apparel"]
     }
 }, { timestamps: true });
 
