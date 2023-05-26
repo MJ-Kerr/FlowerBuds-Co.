@@ -16,12 +16,24 @@ const ProductsSchema = new mongoose.Schema({
         required: [true, "Description is required"],
     },
     Price: {
-        type: String,
+        type: Number,
         required: [true, "Price is required"]
     },
     Quantity: {
-        type: String,
+        type: Number,
         required: [true, "Starting quantity is required"]
+    },
+    style: {
+        type: String,
+        required: [false, "Shirt, Pants, or Hat"]
+    },
+    Color: {
+        type: String,
+        required: [false, "What color would you like?"]
+    },
+    Size: {
+        type: String,
+        required: [false, "What size would you like?"]
     },
     isCandle: {
         type: Boolean,
